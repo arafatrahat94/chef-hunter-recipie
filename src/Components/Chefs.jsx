@@ -18,12 +18,7 @@ const Chefs = ({ loadDatas }) => {
     return <LoadingAnimation></LoadingAnimation>;
   }
   console.log(loadDatas);
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    },
-  };
+
   return (
     <div className="w-11/12 mx-auto mb-4">
       <Swiper
@@ -51,7 +46,7 @@ const Chefs = ({ loadDatas }) => {
                     alt=""
                   />
                 </div>
-                <div className="absolute border border-black w-[273px] text-white bg-black p-2 rounded-lg ps-3 backdrop-blur-md bg-opacity-60 pb-[10px] left-[11px] top-[338px]">
+                <div className="absolute shadow-md shadow-black border border-black w-[278px] text-white bg-black p-2 rounded-lg ps-3 backdrop-blur-md bg-opacity-60 pb-[10px] left-[7px] top-[335px]">
                   <div className="">
                     <h1 className="text-3xl font-bold  font-Nunito">
                       {chef.chef_name}

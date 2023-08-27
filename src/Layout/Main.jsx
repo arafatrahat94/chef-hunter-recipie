@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet, useNavigation } from "react-router-dom";
 import Nav from "../Pages/Shared/Nav";
 import LoadingAnimation from "../Components/LoadingAnimation";
+import Footer from "../Pages/Shared/Footer";
 
 const Main = () => {
   const navigate = useNavigation();
@@ -17,6 +18,7 @@ const Main = () => {
       )}
 
       <Outlet></Outlet>
+      <Footer></Footer>
     </div>
   );
 };

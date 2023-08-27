@@ -30,7 +30,7 @@ const Banner = () => {
               clickable: true,
             }}
             autoplay={{
-              delay: 4500,
+              delay: 5500,
               disableOnInteraction: false,
             }}
             modules={[Autoplay]}
