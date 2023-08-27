@@ -2,48 +2,63 @@ import React, { useContext, useRef, useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa6";
 import { authContext } from "../../Providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 const customId = "custom-id-yes";
-const Login = () => {
-  const { login, glogin, resetPass, loading, gitLogin } =
-    useContext(authContext);
+import "react-toastify/dist/ReactToastify.css";
+const Register = () => {
+  const {
+    login,
+    glogin,
+
+    loading,
+    gitLogin,
+    creaeNewUser,
+    updatePro,
+  } = useContext(authContext);
   const [erros, setErros] = useState("");
   const emaiRef = useRef(null);
   const handlelogin = (event) => {
+    event.preventDefault();
     setErros("");
     const email = event.target.email.value;
     const pass = event.target.password.value;
-    login(email, pass)
-      .then(() => {})
+    const name = event.target.name.value;
+    const photourl = event.target.photourl.value;
+    if (pass.length < 6) {
+      setErros("Password length is less than 6");
+      return;
+    } else if (!/(?=.*[A-Z])/.test(pass)) {
+      setErros("Please add 1 Uppercase in password");
+      return;
+    } else if (!/(?=.*[0-9])/.test(pass)) {
+      setErros("Please add 1 number digit in password");
+      return;
+    }
+    creaeNewUser(email, pass)
+      .then(() => {
+        toast.dark("User Created Successfully", {
+          icon: "💢",
+          position: "top-center",
+          toastId: customId,
+        });
+        setErros("");
+        updatePro(name, photourl);
+      })
       .catch((error) => {
         setErros(error.message);
       });
-    event.preventDefault();
   };
   const handleGlogin = () => {
-    glogin()
-      .then(() => {
-        setErros("");
-      })
-      .catch((error) => {});
-  };
-  const handleGitLogin = () => {
-    gitLogin()
-      .then(() => {
-        setErros("");
-      })
-      .catch((error) => {});
-  };
-  const sendResetPass = (event) => {
-    resetPass(emaiRef.current.value).then(() => {
-      toast.dark("Password reset link is emailed", {
-        icon: "💢",
-        position: "top-center",
-        toastId: customId,
-      });
+    glogin().then(() => {
+      setErros("");
     });
   };
+  const handleGitLogin = () => {
+    gitLogin().then(() => {
+      setErros("");
+    });
+  };
+
   return (
     <div>
       <div className="grid min-h-[71vh] grid-cols-2 relative">
@@ -54,8 +69,34 @@ const Login = () => {
               className="card-body shadow-lg rounded-lg shadow-pink-600"
             >
               <h1 className="text-center font-DancingS font-bold text-3xl tracking-wide mb-[-10px] text-pink-600">
-                Please Login
+                Please Register
               </h1>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-pink-600">Name</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  name="name"
+                  ref={emaiRef}
+                  onFocus={() => setErros("")}
+                  className="input input-bordered"
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-pink-600">Photo Url</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="paste the url link"
+                  name="photourl"
+                  ref={emaiRef}
+                  onFocus={() => setErros("")}
+                  className="input input-bordered"
+                />
+              </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text text-pink-600">Email</span>
@@ -75,23 +116,17 @@ const Login = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="password"
+                  placeholder="pAssw0rd"
                   name="password"
                   onFocus={() => setErros("")}
                   className="input input-bordered"
                 />
                 <label className="label">
                   <Link
-                    onClick={sendResetPass}
+                    to="/login"
                     className="text-pink-600 label-text-alt link link-hover"
                   >
-                    Forgot password?
-                  </Link>
-                  <Link
-                    to="/Register"
-                    className="text-pink-600 label-text-alt link link-hover"
-                  >
-                    New in Foody World?
+                    Already Have An Account?
                   </Link>
                 </label>
               </div>
@@ -145,4 +180,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

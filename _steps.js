@@ -16,22 +16,22 @@
 3.̶ C̶r̶e̶a̶t̶e̶ a̶ r̶e̶a̶s̶o̶n̶a̶b̶l̶e̶ a̶n̶d̶ m̶e̶a̶n̶i̶n̶g̶f̶u̶l̶ f̶o̶o̶t̶e̶r̶.̶ 
     >̶ M̶a̶k̶e̶ s̶u̶r̶e̶ t̶h̶a̶t̶ t̶h̶e̶ n̶a̶v̶b̶a̶r̶ a̶n̶d̶ f̶o̶o̶t̶e̶r̶ a̶r̶e̶ p̶r̶e̶s̶e̶n̶t̶ o̶n̶ a̶l̶l̶ p̶a̶g̶e̶s̶:̶
 
-3. When a user clicks on the login button, they will be redirected to the login page having the following: 
+3̶.̶ W̶h̶e̶n̶ a̶ u̶s̶e̶r̶ c̶l̶i̶c̶k̶s̶ o̶n̶ t̶h̶e̶ l̶o̶g̶i̶n̶ b̶u̶t̶t̶o̶n̶,̶ t̶h̶e̶y̶ w̶i̶l̶l̶ b̶e̶ r̶e̶d̶i̶r̶e̶c̶t̶e̶d̶ t̶o̶ t̶h̶e̶ l̶o̶g̶i̶n̶ p̶a̶g̶e̶ h̶a̶v̶i̶n̶g̶ t̶h̶e̶ f̶o̶l̶l̶o̶w̶i̶n̶g̶:̶ 
 
-    - Email/Password
-    - Google Sign-in
-    - GitHub Sign-in
-    - A link that will redirect to the registration page
+    -̶ E̶m̶a̶i̶l̶/̶P̶a̶s̶s̶w̶o̶r̶d̶
+    -̶ G̶o̶o̶g̶l̶e̶ S̶i̶g̶n̶-̶i̶n̶
+    -̶ G̶i̶t̶H̶u̶b̶ S̶i̶g̶n̶-̶i̶n̶
+    -̶ A̶ l̶i̶n̶k̶ t̶h̶a̶t̶ w̶i̶l̶l̶ r̶e̶d̶i̶r̶e̶c̶t̶ t̶o̶ t̶h̶e̶ r̶e̶g̶i̶s̶t̶r̶a̶t̶i̶o̶n̶ p̶a̶g̶e̶
 
-1. The Registration page will have the Email/Password form having the following fields: 
+1̶.̶ T̶h̶e̶ R̶e̶g̶i̶s̶t̶r̶a̶t̶i̶o̶n̶ p̶a̶g̶e̶ w̶i̶l̶l̶ h̶a̶v̶e̶ t̶h̶e̶ E̶m̶a̶i̶l̶/̶P̶a̶s̶s̶w̶o̶r̶d̶ f̶o̶r̶m̶ h̶a̶v̶i̶n̶g̶ t̶h̶e̶ f̶o̶l̶l̶o̶w̶i̶n̶g̶ f̶i̶e̶l̶d̶s̶:̶ 
 
-    -   Name
+    -̶   N̶a̶m̶e̶
 
-    -   Email
+    -̶   E̶m̶a̶i̶l̶
 
-    -   Password
+    -̶   P̶a̶s̶s̶w̶o̶r̶d̶
 
-    -   Photo URL
+    -̶   P̶h̶o̶t̶o̶ U̶R̶L̶
 
     > **Note:** Do not enforce the email verification method, as it will inconvenience the examiner. If you want, you can add email verification after receiving the assignment result.
 
