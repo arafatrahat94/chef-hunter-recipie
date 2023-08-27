@@ -27,11 +27,14 @@ const Home = () => {
             10$&nbsp;
           </span>
           <button className="font-DancingS bg-pink-600 bg-opacity-100 px-2 pb-1 rounded-lg">
-            buy now
+            <a href="#2">buy now</a>
           </button>
         </h2>
       </div>
       <Banner></Banner>
+      <h1 className="text-pink-600 text-4xl text-center mt-16 mb-4 font-DancingS font-bold ">
+        Meet Our Best Chefs
+      </h1>
       <Chefs loadDatas={loadDatas}></Chefs>
     </div>
   );

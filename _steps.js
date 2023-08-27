@@ -8,13 +8,13 @@
 1. Make sure your design is unique. 
     > First, select the cuisine type. Google the site design or visit ThemeForest to get your website idea. However, your website cannot relate to your previous assignments or any demo project displayed in the course or our conceptual sessions. 
 
-2. Give your website a name. The name should appear on the website and be displayed on the website's title.
+2̶.̶ G̶i̶v̶e̶ y̶o̶u̶r̶ w̶e̶b̶s̶i̶t̶e̶ a̶ n̶a̶m̶e̶.̶ T̶h̶e̶ n̶a̶m̶e̶ s̶h̶o̶u̶l̶d̶ a̶p̶p̶e̶a̶r̶ o̶n̶ t̶h̶e̶ w̶e̶b̶s̶i̶t̶e̶ a̶n̶d̶ b̶e̶ d̶i̶s̶p̶l̶a̶y̶e̶d̶ o̶n̶ t̶h̶e̶ w̶e̶b̶s̶i̶t̶e̶'̶s̶ t̶i̶t̶l̶e̶.̶
 
-2. Your website should have a navbar. 
+2. Y̶o̶u̶r̶ w̶e̶b̶s̶i̶t̶e̶ s̶h̶o̶u̶l̶d̶ h̶a̶v̶e̶ a̶ n̶a̶v̶b̶a̶r̶.̶ 
     > with the **Website name, Home, Blog** and **User profile picture**. The **user profile picture** on the navbar is conditional. If the user is signed in, the navbar will show the profile picture; otherwise, it will show the **Login button.** *If the user name is available, the user's name will be visible when the mouse hovers over the profile picture.*
 
-3. Create a reasonable and meaningful footer. 
-    > Make sure that the navbar and footer are present on all pages:
+3.̶ C̶r̶e̶a̶t̶e̶ a̶ r̶e̶a̶s̶o̶n̶a̶b̶l̶e̶ a̶n̶d̶ m̶e̶a̶n̶i̶n̶g̶f̶u̶l̶ f̶o̶o̶t̶e̶r̶.̶ 
+    >̶ M̶a̶k̶e̶ s̶u̶r̶e̶ t̶h̶a̶t̶ t̶h̶e̶ n̶a̶v̶b̶a̶r̶ a̶n̶d̶ f̶o̶o̶t̶e̶r̶ a̶r̶e̶ p̶r̶e̶s̶e̶n̶t̶ o̶n̶ a̶l̶l̶ p̶a̶g̶e̶s̶:̶
 
 3. When a user clicks on the login button, they will be redirected to the login page having the following: 
 
@@ -46,19 +46,19 @@
 
 6̶.̶ O̶n̶ t̶h̶e̶ H̶o̶m̶e̶p̶a̶g̶e̶:̶ T̶h̶e̶r̶e̶ w̶i̶l̶l̶ b̶e̶ a̶ b̶a̶n̶n̶e̶r̶ s̶e̶c̶t̶i̶o̶n̶.̶ Y̶o̶u̶ c̶a̶n̶ m̶a̶k̶e̶ i̶t̶ a̶ r̶e̶a̶s̶o̶n̶a̶b̶l̶e̶ b̶a̶n̶n̶e̶r̶.̶ T̶h̶a̶t̶ b̶e̶ t̶e̶x̶t̶ o̶n̶ o̶n̶e̶ s̶i̶d̶e̶,̶ a̶n̶d̶ p̶i̶c̶t̶u̶r̶e̶ i̶n̶ a̶n̶o̶t̶h̶e̶r̶ s̶i̶d̶e̶.̶ O̶r̶ i̶t̶ c̶o̶u̶l̶d̶ b̶e̶ t̶e̶x̶t̶ w̶i̶t̶h̶ b̶a̶c̶k̶g̶r̶o̶u̶n̶d̶ p̶i̶c̶t̶u̶r̶e̶s̶.̶ I̶t̶ c̶o̶u̶l̶d̶ b̶e̶ a̶ s̶l̶i̶d̶e̶r̶ o̶r̶ a̶ c̶a̶r̶o̶u̶s̶e̶l̶.̶ Y̶o̶u̶ c̶a̶n̶ m̶a̶k̶e̶ i̶t̶ t̶h̶e̶ w̶a̶y̶ y̶o̶u̶ w̶a̶n̶t̶.̶
 
-7. The home page will have a Chef section with at least six cards. Each card will have the following information: 
+7̶.̶ T̶h̶e̶ h̶o̶m̶e̶ p̶a̶g̶e̶ w̶i̶l̶l̶ h̶a̶v̶e̶ a̶ C̶h̶e̶f̶ s̶e̶c̶t̶i̶o̶n̶ w̶i̶t̶h̶ a̶t̶ l̶e̶a̶s̶t̶ s̶i̶x̶ c̶a̶r̶d̶s̶.̶ E̶a̶c̶h̶ c̶a̶r̶d̶ w̶i̶l̶l̶ h̶a̶v̶e̶ t̶h̶e̶ f̶o̶l̶l̶o̶w̶i̶n̶g̶ i̶n̶f̶o̶r̶m̶a̶t̶i̶o̶n̶:̶ 
 
-    -   Chef Picture
+    -̶   C̶h̶e̶f̶ P̶i̶c̶t̶u̶r̶e̶
 
-    -   Chef Name
+    -̶   C̶h̶e̶f̶ N̶a̶m̶e̶
 
-    -   Years of experience
+    -̶   Y̶e̶a̶r̶s̶ o̶f̶ e̶x̶p̶e̶r̶i̶e̶n̶c̶e̶
 
-    -   Numbers of recipes
+    -̶   N̶u̶m̶b̶e̶r̶s̶ o̶f̶ r̶e̶c̶i̶p̶e̶s̶
 
-    -   Likes
+    -̶   L̶i̶k̶e̶s̶
 
-    -   View Recipes Button
+    -̶   V̶i̶e̶w̶ R̶e̶c̶i̶p̶e̶s̶ B̶u̶t̶t̶o̶n̶
 
 1. Add at least **two** extra sections on the home page. Make sure the sections are meaningful for the website you are building.
 

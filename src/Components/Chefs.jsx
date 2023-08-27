@@ -20,7 +20,7 @@ const Chefs = ({ loadDatas }) => {
   console.log(loadDatas);
 
   return (
-    <div className="w-11/12 mx-auto mb-4">
+    <div id="" className="w-11/12 mx-auto mb-4">
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
