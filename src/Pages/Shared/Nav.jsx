@@ -1,5 +1,6 @@
 import React from "react";
 import DarkmodeButton from "../../Components/DarkmodeButton";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
@@ -55,22 +56,25 @@ const Nav = () => {
             Foody World
           </a>
           <ul className="menu menu-horizontal font-Nunito ps-4 font-bold text-base px-1">
-            <li>
+            <Link to="/" className="px-2">
               <a>Home</a>
-            </li>
+            </Link>
 
-            <li>
+            <Link className="px-2">
               <a>Blogs</a>
-            </li>
+            </Link>
           </ul>
         </div>
         <div className="navbar-end">
           <div>
             <DarkmodeButton></DarkmodeButton>
           </div>
-          <button className="btn  dark:rounded-lg bg-pink-600 px-8 text-white font-Nunito focus:ring ring-pink-600 focus:bg-white focus:text-pink-600">
+          <Link
+            to="/login"
+            className="btn  dark:rounded-lg bg-pink-600 px-8 text-white font-Nunito focus:ring ring-pink-600 focus:bg-white focus:text-pink-600"
+          >
             Login
-          </button>
+          </Link>
         </div>
       </div>
     </div>

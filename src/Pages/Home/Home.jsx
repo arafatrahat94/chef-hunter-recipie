@@ -1,9 +1,12 @@
 import React from "react";
 import Banner from "../../Components/Banner";
+import { useLoaderData } from "react-router-dom";
+import Chefs from "../../Components/Chefs";
 
 const Home = () => {
+  const loadDatas = useLoaderData();
   return (
-    <div>
+    <div className="relative">
       <div className="absolute backdrop-blur p-3 pb-4   shadow-black shadow-md border-e-0 rounded-s-3xl right-0 z-10 top-[120px] w-[60%]">
         <h1 className="font-DancingS ps-2 pt-2 text-5xl text-pink-500">
           Welcome
@@ -29,6 +32,7 @@ const Home = () => {
         </h2>
       </div>
       <Banner></Banner>
+      <Chefs loadDatas={loadDatas}></Chefs>
     </div>
   );
 };
