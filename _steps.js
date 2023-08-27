@@ -3,7 +3,7 @@
 [1 update ](search the word update)
 ## Main Requirements
 
-Create a website that shows the recipes of all available chefs. The website must be exclusively dedicated to one cuisine(Bangladeshi, Chinese, Indian, Mediterranean, Thai, Japanese, Italian, African, Vietnamese, Srilankan, Nepalese, American, Korean, Mexican, Australian, Afgan, French, etc.). For example, if you give Chinese Chef and Chinese food recipes, it will only have Chinese Chef and Chinese food recipes. You cannot add recipes from other countries—only one country chef and recipe.
+1)Create a website that shows the recipes of all available chefs. American, Korean, Mexican, Australian, Afgan, French, etc.). For example, if you give Chinese Chef and Chinese food recipes, it will only have Chinese Chef and Chinese food recipes. You cannot add recipes from other countries—only one country chef and recipe.
 
 1. Make sure your design is unique. 
     > First, select the cuisine type. Google the site design or visit ThemeForest to get your website idea. However, your website cannot relate to your previous assignments or any demo project displayed in the course or our conceptual sessions. 
@@ -44,7 +44,7 @@ Create a website that shows the recipes of all available chefs. The website must
     -   A user cannot submit empty email and password fields
 
 
-6. On the Homepage: There will be a banner section. You can make it a reasonable banner. That be text on one side, and picture in another side. Or it could be text with background pictures. It could be a slider or a carousel. You can make it the way you want.
+6̶.̶ O̶n̶ t̶h̶e̶ H̶o̶m̶e̶p̶a̶g̶e̶:̶ T̶h̶e̶r̶e̶ w̶i̶l̶l̶ b̶e̶ a̶ b̶a̶n̶n̶e̶r̶ s̶e̶c̶t̶i̶o̶n̶.̶ Y̶o̶u̶ c̶a̶n̶ m̶a̶k̶e̶ i̶t̶ a̶ r̶e̶a̶s̶o̶n̶a̶b̶l̶e̶ b̶a̶n̶n̶e̶r̶.̶ T̶h̶a̶t̶ b̶e̶ t̶e̶x̶t̶ o̶n̶ o̶n̶e̶ s̶i̶d̶e̶,̶ a̶n̶d̶ p̶i̶c̶t̶u̶r̶e̶ i̶n̶ a̶n̶o̶t̶h̶e̶r̶ s̶i̶d̶e̶.̶ O̶r̶ i̶t̶ c̶o̶u̶l̶d̶ b̶e̶ t̶e̶x̶t̶ w̶i̶t̶h̶ b̶a̶c̶k̶g̶r̶o̶u̶n̶d̶ p̶i̶c̶t̶u̶r̶e̶s̶.̶ I̶t̶ c̶o̶u̶l̶d̶ b̶e̶ a̶ s̶l̶i̶d̶e̶r̶ o̶r̶ a̶ c̶a̶r̶o̶u̶s̶e̶l̶.̶ Y̶o̶u̶ c̶a̶n̶ m̶a̶k̶e̶ i̶t̶ t̶h̶e̶ w̶a̶y̶ y̶o̶u̶ w̶a̶n̶t̶.̶
 
 7. The home page will have a Chef section with at least six cards. Each card will have the following information: 
 
