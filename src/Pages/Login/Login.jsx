@@ -75,7 +75,7 @@ const Login = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="password"
+                  placeholder="pAssw0rd"
                   name="password"
                   onFocus={() => setErros("")}
                   className="input input-bordered"
