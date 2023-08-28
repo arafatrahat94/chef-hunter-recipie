@@ -83,7 +83,7 @@ const Chefs = ({ loadDatas }) => {
         ))}
       </Swiper>
 
-      <div className="grid grid-cols-2">
+      <div className="lg:hidden grid grid-cols-2">
         {loadDatas.map((chef) => (
           <>
             <div className=" relative px-2">

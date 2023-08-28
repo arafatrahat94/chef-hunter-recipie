@@ -58,7 +58,7 @@ const Login = () => {
   };
   return (
     <div>
-      <div className="grid min-h-[71vh] grid-cols-2 relative">
+      <div className="grid min-h-[71vh] lg:grid-cols-2 relative">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="card flex-shrink-0 w-full mx-11/12 shadow-2xl bg-base-100">
             <form
@@ -123,16 +123,16 @@ const Login = () => {
           </div>
         </div>
 
-        <div className="relative mb-2 rounded-lg flex flex-col items-center justify-center">
+        <div className="relative mb-2 mx-5 rounded-lg flex flex-col items-center justify-center">
           <h1 className="text-2xl text-center font-Nunito">
-            <span className="text-4xl font-DancingS mb-4">
+            <span className="text-3xl lg:text-4xl font-DancingS mb-4">
               Experience a culinary journey through{" "}
-              <span className="text-5xl font-DancingS text-pink-600 font-bold">
+              <span className="text-4xl lg:text-5xl font-DancingS text-pink-600 font-bold">
                 Foody World's
               </span>{" "}
               diverse website,
             </span>
-            <span className="text-4xl font-DancingS">
+            <span className="text-3xl lg:text-4xl font-DancingS">
               offering a delectable array of global cuisines and gastronomic
               inspirations
             </span>

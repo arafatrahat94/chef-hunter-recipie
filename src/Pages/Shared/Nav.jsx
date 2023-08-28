@@ -3,6 +3,7 @@ import DarkmodeButton from "../../Components/DarkmodeButton";
 import { Link } from "react-router-dom";
 import { authContext } from "../../Providers/AuthProvider";
 import { ToastContainer } from "react-toastify";
+import Activelink from "../../Components/Activelink";
 
 const Nav = () => {
   const {
@@ -42,23 +43,16 @@ const Nav = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li>
+              <Activelink to="/" className="px-2 py-2">
+                <a>Home</a>
+              </Activelink>
+
+              <Activelink className="px-2 py-2">
+                <a>Blogs</a>
+              </Activelink>
+              <a href="#popular" className="px-2 py-2">
+                <a>Popular</a>
+              </a>
               {user ? (
                 <>
                   <Link
@@ -80,22 +74,22 @@ const Nav = () => {
               )}
             </ul>
           </div>
-          {/* <a className="btn pe-0 btn-ghost normal-case text-2xl font-bold text-pink-600 font-DancingS">
+          <a className="btn pe-0 btn-ghost normal-case text-2xl font-bold text-pink-600 font-DancingS">
             Foody World
-          </a> */}
+          </a>
         </div>
         <div className="navbar-start  hidden lg:flex">
           <a className="btn pe-0 dark:text-pink-600 dark:font-extrabold  btn-ghost normal-case text-2xl font-bold   font-DancingS">
             Foody World
           </a>
-          <ul className="menu menu-horizontal font-Nunito ps-4 font-bold text-base px-1">
-            <Link to="/" className="px-2">
+          <ul className="menu menu-horizontal flex justify-center items-center font-Nunito ps-4 font-bold text-base px-1">
+            <Activelink to="/" className="px-2">
               <a>Home</a>
-            </Link>
+            </Activelink>
 
-            <Link className="px-2">
+            <Activelink className="px-2">
               <a>Blogs</a>
-            </Link>
+            </Activelink>
             <a href="#popular" className="px-2">
               <a>Popular</a>
             </a>
