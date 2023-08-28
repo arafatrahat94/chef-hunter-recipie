@@ -18,7 +18,7 @@ const Nav = () => {
   } = useContext(authContext);
   console.log(user?.displayName);
   return (
-    <div className="sticky top-0 bg-white z-20">
+    <div className=" z-20">
       <div className="navbar p-2">
         <div className="navbar-start lg:hidden">
           <div className="dropdown z-20 lg:hidden">
@@ -59,6 +59,25 @@ const Nav = () => {
               <li>
                 <a>Item 3</a>
               </li>
+              {user ? (
+                <>
+                  <Link
+                    onClick={logOut}
+                    className="btn  dark:rounded-lg bg-pink-600 px-8 text-white font-Nunito focus:ring ring-pink-600 focus:bg-white focus:text-pink-600"
+                  >
+                    Logout
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link
+                    to="/login"
+                    className="btn  dark:rounded-lg bg-pink-600 px-8 text-white font-Nunito focus:ring ring-pink-600 focus:bg-white focus:text-pink-600"
+                  >
+                    Login
+                  </Link>
+                </>
+              )}
             </ul>
           </div>
           {/* <a className="btn pe-0 btn-ghost normal-case text-2xl font-bold text-pink-600 font-DancingS">
@@ -83,13 +102,13 @@ const Nav = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <div>
+          <div className="hidden lg:block">
             <DarkmodeButton></DarkmodeButton>
           </div>
           {user ? (
             <div
               data-tip={user?.displayName}
-              className="tooltip z-30 tooltip-bottom w-12 my-2 mx-3"
+              className="tooltip z-30 tooltip-left lg:tooltip-bottom w-8 lg:w-12 my-2 mx-3"
             >
               <img
                 className="rounded-full ring ring-pink-600"
@@ -100,25 +119,27 @@ const Nav = () => {
           ) : (
             ""
           )}
-          {user ? (
-            <>
-              <Link
-                onClick={logOut}
-                className="btn  dark:rounded-lg bg-pink-600 px-8 text-white font-Nunito focus:ring ring-pink-600 focus:bg-white focus:text-pink-600"
-              >
-                Logout
-              </Link>
-            </>
-          ) : (
-            <>
-              <Link
-                to="/login"
-                className="btn  dark:rounded-lg bg-pink-600 px-8 text-white font-Nunito focus:ring ring-pink-600 focus:bg-white focus:text-pink-600"
-              >
-                Login
-              </Link>
-            </>
-          )}
+          <div className="hidden lg:block">
+            {user ? (
+              <>
+                <Link
+                  onClick={logOut}
+                  className="btn  dark:rounded-lg bg-pink-600 px-8 text-white font-Nunito focus:ring ring-pink-600 focus:bg-white focus:text-pink-600"
+                >
+                  Logout
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link
+                  to="/login"
+                  className="btn  dark:rounded-lg bg-pink-600 px-8 text-white font-Nunito focus:ring ring-pink-600 focus:bg-white focus:text-pink-600"
+                >
+                  Login
+                </Link>
+              </>
+            )}
+          </div>
         </div>
         <ToastContainer />
       </div>
