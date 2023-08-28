@@ -16,8 +16,9 @@ const Nav = () => {
     logOut,
     user,
   } = useContext(authContext);
+  console.log(user?.displayName);
   return (
-    <div>
+    <div className="sticky top-0 bg-white z-20">
       <div className="navbar p-2">
         <div className="navbar-start lg:hidden">
           <div className="dropdown z-20 lg:hidden">
@@ -76,12 +77,29 @@ const Nav = () => {
             <Link className="px-2">
               <a>Blogs</a>
             </Link>
+            <a href="#popular" className="px-2">
+              <a>Popular</a>
+            </a>
           </ul>
         </div>
         <div className="navbar-end">
           <div>
             <DarkmodeButton></DarkmodeButton>
           </div>
+          {user ? (
+            <div
+              data-tip={user?.displayName}
+              className="tooltip z-30 tooltip-bottom w-12 my-2 mx-3"
+            >
+              <img
+                className="rounded-full ring ring-pink-600"
+                src={user?.photoURL}
+                alt=""
+              />
+            </div>
+          ) : (
+            ""
+          )}
           {user ? (
             <>
               <Link

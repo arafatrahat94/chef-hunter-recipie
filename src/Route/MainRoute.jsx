@@ -18,12 +18,18 @@ const router = createBrowserRouter([
         element: <Home></Home>,
         loader: () =>
           fetch(`https://chef-server-eight-beta.vercel.app/chefData`),
+        errorElement: <ErrorAnimation></ErrorAnimation>,
       },
       {
         path: "/login",
         element: <Login></Login>,
+        errorElement: <ErrorAnimation></ErrorAnimation>,
       },
-      { path: "/Register", element: <Register></Register> },
+      {
+        path: "/Register",
+        element: <Register></Register>,
+        errorElement: <ErrorAnimation></ErrorAnimation>,
+      },
       {
         path: "/recipie/:id",
         element: (
@@ -31,10 +37,12 @@ const router = createBrowserRouter([
             <ChefRecipie></ChefRecipie>
           </Privateroute>
         ),
+
         loader: ({ params }) =>
           fetch(
             `https://chef-server-eight-beta.vercel.app/chefData/${params.id}`
           ),
+        errorElement: <ErrorAnimation></ErrorAnimation>,
       },
     ],
   },

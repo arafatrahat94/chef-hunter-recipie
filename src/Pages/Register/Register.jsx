@@ -2,7 +2,7 @@ import React, { useContext, useRef, useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa6";
 import { authContext } from "../../Providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 const customId = "custom-id-yes";
 import "react-toastify/dist/ReactToastify.css";
 const Register = () => {
@@ -16,7 +16,11 @@ const Register = () => {
     updatePro,
   } = useContext(authContext);
   const [erros, setErros] = useState("");
-  const emaiRef = useRef(null);
+  const location = useLocation();
+
+  const from = location?.state?.from || "/";
+  const navigate = useNavigate();
+  console.log(location);
   const handlelogin = (event) => {
     event.preventDefault();
     setErros("");
@@ -50,11 +54,13 @@ const Register = () => {
   };
   const handleGlogin = () => {
     glogin().then(() => {
+      navigate(from, { replace: true });
       setErros("");
     });
   };
   const handleGitLogin = () => {
     gitLogin().then(() => {
+      navigate(from, { replace: true });
       setErros("");
     });
   };
@@ -79,7 +85,7 @@ const Register = () => {
                   type="text"
                   placeholder="Name"
                   name="name"
-                  ref={emaiRef}
+                  required
                   onFocus={() => setErros("")}
                   className="input input-bordered"
                 />
@@ -92,7 +98,7 @@ const Register = () => {
                   type="text"
                   placeholder="paste the url link"
                   name="photourl"
-                  ref={emaiRef}
+                  required
                   onFocus={() => setErros("")}
                   className="input input-bordered"
                 />
@@ -105,7 +111,7 @@ const Register = () => {
                   type="email"
                   placeholder="email"
                   name="email"
-                  ref={emaiRef}
+                  required
                   onFocus={() => setErros("")}
                   className="input input-bordered"
                 />
@@ -118,6 +124,7 @@ const Register = () => {
                   type="text"
                   placeholder="pAssw0rd"
                   name="password"
+                  required
                   onFocus={() => setErros("")}
                   className="input input-bordered"
                 />

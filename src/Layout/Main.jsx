@@ -7,7 +7,7 @@ import Footer from "../Pages/Shared/Footer";
 const Main = () => {
   const navigate = useNavigation();
   return (
-    <div>
+    <div className="min-h-screen">
       <Nav></Nav>
       {navigate.state === "loading" ? (
         <>

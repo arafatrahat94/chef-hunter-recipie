@@ -3,7 +3,7 @@ import { FaGithub, FaGoogle } from "react-icons/fa6";
 import { authContext } from "../../Providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 const customId = "custom-id-yes";
 const Login = () => {
   const location = useLocation();
@@ -77,6 +77,7 @@ const Login = () => {
                   placeholder="email"
                   name="email"
                   ref={emaiRef}
+                  required
                   onFocus={() => setErros("")}
                   className="input input-bordered"
                 />
@@ -89,6 +90,7 @@ const Login = () => {
                   type="text"
                   placeholder="pAssw0rd"
                   name="password"
+                  required
                   onFocus={() => setErros("")}
                   className="input input-bordered"
                 />
@@ -100,6 +102,8 @@ const Login = () => {
                     Forgot password?
                   </Link>
                   <Link
+                    state={{ from: from }}
+                    replace={true}
                     to="/Register"
                     className="text-pink-600 label-text-alt link link-hover"
                   >
