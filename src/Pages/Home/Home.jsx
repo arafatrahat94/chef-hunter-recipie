@@ -26,7 +26,7 @@ const Home = () => {
           .
         </h2>
       </div>
-      <div className="absolute py-2 lg:ps-4 backdrop-blur lg:p-3 lg:pb-4 border-base-300 shadow-md text-center shadow-black rounded-e-3xl left-0 z-10 top-[150px] lg:top-[330px] lg:py-4 w-[75%] lg:pe-4">
+      <div className="absolute py-2 lg:ps-4 backdrop-blur lg:p-3 lg:pb-4 border-base-300 shadow-md text-center shadow-black rounded-e-3xl left-0 z-10 customO:top-[155px] top-[150px] lg:top-[330px] lg:py-4 w-[75%] lg:pe-4">
         <h2 className="font-Nunito lg:pb-4 tracking-wide lg:text-[30px] text-xl ms-2 text-white  font-semibold">
           Pricing Starts{" "}
           <span className="text-pink-500  font-DancingS">Form</span> only

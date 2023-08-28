@@ -42,10 +42,10 @@ const ChefRecipie = () => {
             className="grid  lg:grid-cols-2 w-10/12 mx-auto"
             id="banner of chef"
           >
-            <div className="w-[300px]  my-6">
+            <div className="w-[300px] mx-auto my-6">
               <img src={data.chef_picture_sm} className="rounded-xl" alt="" />
             </div>
-            <div className="bg-black lg-border-none border border-pink-500 bg-opacity-80 backdrop-blur-lg px-4 pb-2 pt-2 mt-1 rounded-2xl">
+            <div className="bg-black lg-border-none border border-pink-500 customO:bg-opacity-100 lg:bg-opacity-80 lg:backdrop-blur-lg customO:backdrop-blur-none px-4 pb-2 pt-2 mt-1 rounded-2xl">
               <h1 className=" font-DancingS text-center text-2xl py-2 text-white">
                 About Chef
               </h1>
@@ -140,7 +140,7 @@ const ChefRecipie = () => {
                     <th>
                       <button
                         onClick={() => handleDisable(index)}
-                        className={`bg-pink-600 w-full rounded-lg  py-2 ${
+                        className={`bg-pink-600 text-white w-full rounded-lg  py-2 ${
                           disabledStates[index] === true
                             ? "btn-disabled bg-opacity-40"
                             : ""
