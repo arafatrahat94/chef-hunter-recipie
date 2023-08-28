@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { useNavigation } from "react-router-dom";
 import LoadingAnimation from "./LoadingAnimation";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import { FaArrowLeft, FaArrowRight, FaThumbsUp } from "react-icons/fa6";
 
 const Chefs = ({ loadDatas }) => {
   const navigation = useNavigation();
@@ -65,10 +65,13 @@ const Chefs = ({ loadDatas }) => {
                       </span>{" "}
                     </h2>
                   </div>
-                  <div className="mt-2 ">
+                  <div className="mt-2 flex items-center">
                     <button className="focus:ring ring-pink-600 focus:bg-transparent  bg-pink-600 items-center flex py-1 px-2 rounded-lg">
                       Show Recipie &nbsp; <FaArrowRight />
                     </button>
+                    <div className="flex items-center gap-2 ms-auto me-2">
+                      <FaThumbsUp /> {chef.likes}
+                    </div>
                   </div>
                 </div>
               </div>
