@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Autoplay, Pagination } from "swiper/modules";
-import { useNavigation } from "react-router-dom";
+import { Link, useNavigation } from "react-router-dom";
 import LoadingAnimation from "./LoadingAnimation";
 import { FaArrowLeft, FaArrowRight, FaThumbsUp } from "react-icons/fa6";
 
@@ -66,9 +66,12 @@ const Chefs = ({ loadDatas }) => {
                     </h2>
                   </div>
                   <div className="mt-2 flex items-center">
-                    <button className="focus:ring ring-pink-600 focus:bg-transparent  bg-pink-600 items-center flex py-1 px-2 rounded-lg">
+                    <Link
+                      to={`/recipie/${chef.uid}`}
+                      className="focus:ring ring-pink-600 focus:bg-transparent  bg-pink-600 items-center flex py-1 px-2 rounded-lg"
+                    >
                       Show Recipie &nbsp; <FaArrowRight />
-                    </button>
+                    </Link>
                     <div className="flex items-center gap-2 ms-auto me-2">
                       <FaThumbsUp /> {chef.likes}
                     </div>

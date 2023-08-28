@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import DarkmodeButton from "../../Components/DarkmodeButton";
 import { Link } from "react-router-dom";
+import { authContext } from "../../Providers/AuthProvider";
+import { ToastContainer } from "react-toastify";
 
 const Nav = () => {
+  const {
+    login,
+    glogin,
+    resetPass,
+    loading,
+    gitLogin,
+    creaeNewUser,
+    updatePro,
+    logOut,
+    user,
+  } = useContext(authContext);
   return (
     <div>
       <div className="navbar p-2">
@@ -69,13 +82,27 @@ const Nav = () => {
           <div>
             <DarkmodeButton></DarkmodeButton>
           </div>
-          <Link
-            to="/login"
-            className="btn  dark:rounded-lg bg-pink-600 px-8 text-white font-Nunito focus:ring ring-pink-600 focus:bg-white focus:text-pink-600"
-          >
-            Login
-          </Link>
+          {user ? (
+            <>
+              <Link
+                onClick={logOut}
+                className="btn  dark:rounded-lg bg-pink-600 px-8 text-white font-Nunito focus:ring ring-pink-600 focus:bg-white focus:text-pink-600"
+              >
+                Logout
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link
+                to="/login"
+                className="btn  dark:rounded-lg bg-pink-600 px-8 text-white font-Nunito focus:ring ring-pink-600 focus:bg-white focus:text-pink-600"
+              >
+                Login
+              </Link>
+            </>
+          )}
         </div>
+        <ToastContainer />
       </div>
     </div>
   );

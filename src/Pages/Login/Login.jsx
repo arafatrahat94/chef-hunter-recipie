@@ -3,9 +3,12 @@ import { FaGithub, FaGoogle } from "react-icons/fa6";
 import { authContext } from "../../Providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 const customId = "custom-id-yes";
 const Login = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location?.state?.from?.pathname || "/";
   const { login, glogin, resetPass, loading, gitLogin } =
     useContext(authContext);
   const [erros, setErros] = useState("");
@@ -15,7 +18,10 @@ const Login = () => {
     const email = event.target.email.value;
     const pass = event.target.password.value;
     login(email, pass)
-      .then(() => {})
+      .then(() => {
+        navigate(from, { replace: true });
+        setErros(null);
+      })
       .catch((error) => {
         setErros(error.message);
       });
@@ -24,6 +30,7 @@ const Login = () => {
   const handleGlogin = () => {
     glogin()
       .then(() => {
+        navigate(from, { replace: true });
         setErros("");
       })
       .catch((error) => {});
@@ -31,18 +38,23 @@ const Login = () => {
   const handleGitLogin = () => {
     gitLogin()
       .then(() => {
+        navigate(from, { replace: true });
         setErros("");
       })
       .catch((error) => {});
   };
   const sendResetPass = (event) => {
-    resetPass(emaiRef.current.value).then(() => {
-      toast.dark("Password reset link is emailed", {
-        icon: "💢",
-        position: "top-center",
-        toastId: customId,
+    resetPass(emaiRef.current.value)
+      .then(() => {
+        toast.dark("Password reset link is emailed", {
+          icon: "💢",
+          position: "top-center",
+          toastId: customId,
+        });
+      })
+      .catch((error) => {
+        setErros(error.message);
       });
-    });
   };
   return (
     <div>

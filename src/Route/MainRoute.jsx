@@ -4,6 +4,8 @@ import Home from "../Pages/Home/Home";
 import ErrorAnimation from "../Components/ErrorAnimation";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import ChefRecipie from "../Pages/Recipie/ChefRecipie";
+import Privateroute from "./Privateroute";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,18 @@ const router = createBrowserRouter([
         element: <Login></Login>,
       },
       { path: "/Register", element: <Register></Register> },
+      {
+        path: "/recipie/:id",
+        element: (
+          <Privateroute>
+            <ChefRecipie></ChefRecipie>
+          </Privateroute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://chef-server-eight-beta.vercel.app/chefData/${params.id}`
+          ),
+      },
     ],
   },
 ]);
