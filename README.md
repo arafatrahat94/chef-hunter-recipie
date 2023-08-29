@@ -1,6 +1,7 @@
 # FOODY WORLD
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Live server (https://chef-site-a0926.web.app)
+- This Project is based on the requirement provided by the teachers
+- In this project i have used Vite React.js,Tailwind,React Router,React Icons,Lottiefiles,Css3,Daisy Ui Tailwind component library,Lazy Load
+- This Project shows the American chefs recipie with food sells too.
+- By default the theme is set to dark mode but if you want you can set it to light mode this accessibility is also added.
