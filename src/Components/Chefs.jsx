@@ -94,7 +94,7 @@ const Chefs = ({ loadDatas }) => {
                   alt=""
                 />
               </div>
-              <div className="absolute scale-90 z-20 shadow-md shadow-black border border-black  text-white bg-black p-2 rounded-lg w-[172px] ps-3 backdrop-blur-md bg-opacity-60 pb-[10px] customO:left-1 left-0 customO:top-[167px] top-[168px]">
+              <div className="absolute scale-90 z-20 shadow-md shadow-black border border-black customO:h-[132px] text-white bg-black p-2 rounded-lg w-[172px] ps-3 backdrop-blur-md bg-opacity-60 pb-[10px] customO:left-[10px] left-0 customO:top-[165px] top-[168px]">
                 <div className="">
                   <h1 className=" font-bold  font-Nunito">{chef.chef_name}</h1>
                   <h2 className="">

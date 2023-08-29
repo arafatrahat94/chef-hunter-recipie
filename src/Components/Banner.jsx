@@ -15,7 +15,7 @@ const Banner = () => {
   }, []);
   return (
     <div className="">
-      <div className="absolute customO:top-[228px] lg:hidden z-20 text-pink-600 top-[220px] shadow shadow-black backdrop-blur rounded-e-full w-20 flex justify-end">
+      <div className="absolute ring ring-pink-600 ring-s-0 customO:top-[240px] lg:hidden z-20 text-pink-600 top-[220px] shadow shadow-black backdrop-blur rounded-e-full w-20 flex justify-end">
         <div className=" rounded-full ps-1">
           <DarkmodeButton></DarkmodeButton>
         </div>
