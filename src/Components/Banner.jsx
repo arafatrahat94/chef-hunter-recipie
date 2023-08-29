@@ -42,14 +42,12 @@ const Banner = () => {
             {bigBanner.map((img) => (
               <>
                 <SwiperSlide>
-                  <LazyLoad>
-                    <img
-                      src={img}
-                      loading="lazy"
-                      className="opacity-40  w-full"
-                      alt=""
-                    />
-                  </LazyLoad>
+                  <img
+                    src={img}
+                    loading="lazy"
+                    className="opacity-40  w-full"
+                    alt=""
+                  />
                 </SwiperSlide>
               </>
             ))}
