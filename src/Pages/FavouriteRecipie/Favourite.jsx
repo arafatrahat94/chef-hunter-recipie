@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import DarkmodeButton from "../../Components/DarkmodeButton";
+import { FaHouse } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 const Favourite = () => {
   const [recipie, setRecipie] = useState([]);
@@ -13,11 +15,25 @@ const Favourite = () => {
     setRecipie(filter);
     localStorage.setItem("FavouriteRecipie", JSON.stringify(filter));
   };
+  const navigate = useNavigate();
+  const handehome = () => {
+    navigate("/");
+  };
   return (
     <div className="min-h-screen">
       <div className="absolute ring ring-pink-600 ring-s-0 customO:top-[90px] lg:hidden z-20 text-pink-600 right-0 top-[90px] shadow shadow-black backdrop-blur rounded-s-full w-14 flex justify-end">
         <div className=" rounded-full ps-1">
           <DarkmodeButton></DarkmodeButton>
+        </div>
+      </div>
+      <div
+        onClick={handehome}
+        className="absolute ring right-0 ring-pink-600  customO:top-[150px] lg:hidden z-20 text-pink-600 top-[150px] shadow shadow-black backdrop-blur rounded-s-full flex justify-start"
+      >
+        <div className=" rounded-full ">
+          <button className="px-2 py-2 flex items-center justify-center">
+            <FaHouse className="flex items-center customO:text-xl" />
+          </button>
         </div>
       </div>
       {recipie.length > 0 ? (
