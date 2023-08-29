@@ -9,16 +9,9 @@ const Main = () => {
   return (
     <div className="min-h-screen">
       <Nav></Nav>
-      {navigate.state === "loading" ? (
-        <>
-          <LoadingAnimation></LoadingAnimation>
-        </>
-      ) : (
-        ""
-      )}
 
       {navigate.state === "loading" ? (
-        ""
+        <LoadingAnimation></LoadingAnimation>
       ) : (
         <>
           <Outlet></Outlet>

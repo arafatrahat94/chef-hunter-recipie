@@ -6,6 +6,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import ChefRecipie from "../Pages/Recipie/ChefRecipie";
 import Privateroute from "./Privateroute";
+import Favourite from "../Pages/FavouriteRecipie/Favourite";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
           fetch(
             `https://chef-server-eight-beta.vercel.app/chefData/${params.id}`
           ),
+        errorElement: <ErrorAnimation></ErrorAnimation>,
+      },
+      {
+        path: "/Favourite",
+        element: <Favourite></Favourite>,
         errorElement: <ErrorAnimation></ErrorAnimation>,
       },
     ],

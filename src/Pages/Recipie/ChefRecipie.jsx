@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { FaThumbsUp } from "react-icons/fa6";
-import { useLoaderData } from "react-router-dom";
+import { FaHouse, FaThumbsUp } from "react-icons/fa6";
+import { useLoaderData, useNavigate } from "react-router-dom";
 const customId = "custom-id-yes";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import DarkmodeButton from "../../Components/DarkmodeButton";
+import LazyLoad from "react-lazy-load";
+
 const ChefRecipie = () => {
+  const navigate = useNavigate();
   const data = useLoaderData();
   const [disabledStates, setDisabledStates] = useState(
     Array(data.recipes.length).fill(false)
@@ -21,29 +24,57 @@ const ChefRecipie = () => {
       toastId: customId,
     });
   };
+  const sendData = (x) => {
+    const again = localStorage.getItem("FavouriteRecipie");
+    let storedUniqueApplyCart = [];
+    if (again) {
+      storedUniqueApplyCart = JSON.parse(again);
+    }
+    storedUniqueApplyCart.push(x);
+    localStorage.setItem(
+      "FavouriteRecipie",
+      JSON.stringify(storedUniqueApplyCart)
+    );
+  };
+  const handehome = () => {
+    navigate(-1);
+  };
   console.log(data);
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   return (
     <div className="min-h-screen">
-      <div>
-        <div className="hidden lg:block relative bg-black">
-          <img
-            className="w-full absolute -z-10"
-            src="https://i.ibb.co/7yfHDZK/jonathan-borba-KSAThu-J9mjs-unsplash.jpg"
-            alt=""
-          />
+      <div
+        onClick={handehome}
+        className="absolute ring right-0 ring-pink-600  customO:top-[100px] lg:hidden z-20 text-pink-600 top-[100px] shadow shadow-black backdrop-blur rounded-s-full flex justify-start"
+      >
+        <div className=" rounded-full ">
+          <button className="px-2 py-2 flex items-center justify-center">
+            <FaHouse className="flex items-center customO:text-xl" />
+          </button>
         </div>
+      </div>
+      <div>
+        {/*  */}
         <div className="absolute  lg:hidden z-20  text-pink-600 top-[375px] shadow shadow-black backdrop-blur rounded-e-full w-20 flex justify-end">
           <div className="sticky  rounded-full ps-1">
             <DarkmodeButton></DarkmodeButton>
           </div>
         </div>
         <div className="flex justify-center items-center">
-          <div
-            className="grid  lg:grid-cols-2 w-10/12 mx-auto"
-            id="banner of chef"
-          >
-            <div className="w-[300px] mx-auto my-6">
-              <img src={data.chef_picture_sm} className="rounded-xl" alt="" />
+          <div className="grid  lg:grid-cols-2 w-10/12 mx-auto">
+            <div className="w-[300px]  mx-auto my-6">
+              <LazyLoad
+                threshold={0.95}
+                onContentVisible={() => {
+                  console.log("loaded!");
+                }}
+              >
+                <img
+                  src={data.chef_picture_sm}
+                  className="rounded-xl w-full"
+                  alt=""
+                />
+              </LazyLoad>
             </div>
             <div className="bg-black lg-border-none border border-pink-500 customO:bg-opacity-100 lg:bg-opacity-80 lg:backdrop-blur-lg customO:backdrop-blur-none px-4 pb-2 pt-2 mt-1 rounded-2xl">
               <h1 className=" font-DancingS text-center text-2xl py-2 text-white">
@@ -64,7 +95,7 @@ const ChefRecipie = () => {
                 <span className="font-DancingS text-white">
                   {data.years_of_experience}+
                 </span>
-                Year's
+                Year
               </h1>
               <h1
                 className="px-3 font-bold text-white text-2xl font-Nunito
@@ -137,7 +168,7 @@ const ChefRecipie = () => {
                     <td className="w-[400px] text-justify">
                       {x.cooking_method}
                     </td>
-                    <th>
+                    <th onClick={() => sendData(x)}>
                       <button
                         onClick={() => handleDisable(index)}
                         className={`bg-pink-600 text-white w-full rounded-lg  py-2 ${

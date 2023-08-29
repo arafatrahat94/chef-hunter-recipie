@@ -6,6 +6,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import DarkmodeButton from "./DarkmodeButton";
+import LazyLoad from "react-lazy-load";
 const Banner = () => {
   const [bigBanner, setBigBanner] = useState([]);
   useEffect(() => {
@@ -39,7 +40,14 @@ const Banner = () => {
             {bigBanner.map((img) => (
               <>
                 <SwiperSlide>
-                  <img src={img} className="opacity-40  w-full" alt="" />
+                  <LazyLoad threshold={0.95}>
+                    <img
+                      src={img}
+                      loading="lazy"
+                      className="opacity-40  w-full"
+                      alt=""
+                    />
+                  </LazyLoad>
                 </SwiperSlide>
               </>
             ))}
