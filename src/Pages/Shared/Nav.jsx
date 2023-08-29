@@ -47,7 +47,7 @@ const Nav = () => {
                 <a>Home</a>
               </Activelink>
 
-              <Activelink className="px-2 py-2">
+              <Activelink to="/Blog" className="px-2 py-2">
                 <a>Blogs</a>
               </Activelink>
               <Activelink to="/Favourite" className="px-2 py-2">
@@ -88,7 +88,7 @@ const Nav = () => {
               <a>Home</a>
             </Activelink>
 
-            <Activelink className="px-2">
+            <Activelink to="/Blog" className="px-2">
               <a>Blogs</a>
             </Activelink>
             <Activelink to="/Favourite" className="px-2 py-2">

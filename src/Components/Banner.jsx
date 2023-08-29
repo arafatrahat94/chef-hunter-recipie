@@ -7,7 +7,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import DarkmodeButton from "./DarkmodeButton";
 import LazyLoad from "react-lazy-load";
+import { useNavigation } from "react-router-dom";
 const Banner = () => {
+  const navigate = useNavigation();
   const [bigBanner, setBigBanner] = useState([]);
   useEffect(() => {
     fetch(`https://chef-server-eight-beta.vercel.app/bannerBig`)
@@ -40,7 +42,7 @@ const Banner = () => {
             {bigBanner.map((img) => (
               <>
                 <SwiperSlide>
-                  <LazyLoad threshold={0.95}>
+                  <LazyLoad>
                     <img
                       src={img}
                       loading="lazy"

@@ -7,6 +7,7 @@ import Register from "../Pages/Register/Register";
 import ChefRecipie from "../Pages/Recipie/ChefRecipie";
 import Privateroute from "./Privateroute";
 import Favourite from "../Pages/FavouriteRecipie/Favourite";
+import Blog from "../Pages/Blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
       {
         path: "/Favourite",
         element: <Favourite></Favourite>,
+        errorElement: <ErrorAnimation></ErrorAnimation>,
+      },
+      {
+        path: "/Blog",
+        element: <Blog></Blog>,
         errorElement: <ErrorAnimation></ErrorAnimation>,
       },
     ],
